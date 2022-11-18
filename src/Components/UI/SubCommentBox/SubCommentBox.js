@@ -45,7 +45,7 @@ function SubCommentBox(props) {
             )}
             {commentActions.isReplyInput && (
               <CommentInput
-                value={commentActions.inputValue}
+                value={`@${commentActions.username} ${commentActions.inputValue}`}
                 onKeyPress={commentActions.keyHandler}
                 onChange={commentActions.changeHandler}
                 commenttype="subComment"
