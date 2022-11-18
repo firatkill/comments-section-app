@@ -1,0 +1,33 @@
+input {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: none;
+  background-color: rgba(255, 166, 0, 0.7);
+  border-radius: 10px;
+  animation-name: show;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
+  transform-origin: left top;
+  animation-timing-function: ease-in-out;
+}
+input[commenttype="postComment"] {
+  margin-top: 1rem;
+  width: 100%;
+  font-size: 1.2rem;
+  outline: 2px solid black;
+  height: 3rem;
+}
+input[commenttype="subComment"] {
+  width: 25rem;
+  outline: 2px solid black;
+  height: 1.5rem;
+  font-size: 1.1rem;
+}
+@keyframes show {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}

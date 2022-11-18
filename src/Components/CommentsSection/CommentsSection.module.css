@@ -1,0 +1,16 @@
+.CommentsSectionContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin-top: 1rem;
+}
+
+.noComments {
+  background-color: rgb(249, 215, 218);
+  width: 100%;
+  text-align: center;
+  font-size: 2rem;
+  padding: 10px;
+  border-radius: 20px;
+}

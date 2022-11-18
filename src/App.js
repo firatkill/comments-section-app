@@ -1,24 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
-
+import PickUserName from "./Components/PickUserName/PickUserName";
+import Container from "./Components/UI/Container/Container";
+import Post from "./Components/Post/Post";
+import { useSelector } from "react-redux";
+import CommentsSection from "./Components/CommentsSection/CommentsSection";
 function App() {
+  const username = useSelector((state) => state.ui.username);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Container>
+      {username !== "" && (
+        <>
+          {/* //components */}
+
+          <Post />
+          <CommentsSection />
+        </>
+      )}
+      {username === "" && <PickUserName />}
+    </Container>
   );
 }
 

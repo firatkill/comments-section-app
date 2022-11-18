@@ -1,0 +1,86 @@
+.CommentBoxContainer {
+  width: 100%;
+}
+.CommentBoxContent {
+  background-color: #f5f5f5;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  border-radius: 20px;
+  margin-top: 5px;
+  transition: all 0.1s ease-in-out;
+  padding: 2% 5%;
+}
+.CommentBoxContent:hover {
+  transform: scale(1.05);
+}
+.authorAndTime {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.userName {
+  font-size: 1.3rem;
+  margin-right: 2rem;
+}
+.voteBox {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.voteBox[votestatus="down"] .icon:last-of-type {
+  fill: red;
+  transform: scale(1.2);
+  color: Red;
+}
+.voteBox[votestatus="up"] .icon:first-of-type {
+  fill: orange;
+  transform: scale(1.2);
+  color: orange;
+}
+.voteBox .icon {
+  font-size: 1.4rem;
+  margin-right: 5px;
+  margin-left: 5px;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.voteBox .icon:first-of-type:hover {
+  fill: orange;
+  transform: scale(1.3);
+  color: orange;
+}
+.voteBox .icon:last-of-type:hover {
+  fill: red;
+  transform: scale(1.3);
+  color: red;
+}
+.voteBox .replyButton {
+  margin-left: 1rem;
+  font-weight: bolder;
+  opacity: 0.6;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.CommentBoxFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1rem;
+}
+.showButton {
+  background-color: orange;
+  padding: 10px 15px;
+  border-radius: 10px;
+  font-weight: bolder(bold);
+  color: black;
+  border: none;
+}
+
+.showButton:hover {
+  background-color: black;
+  color: orange;
+  cursor: pointer;
+}
